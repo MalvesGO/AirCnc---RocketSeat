@@ -10,11 +10,13 @@ function App() {
 
   return ( 
     <div className='container'>
+
       <img src={logo} alt='aircnc'></img>
 
       <div className='content'>
         <Routes />
       </div>
+      
     </div>
   );
 }

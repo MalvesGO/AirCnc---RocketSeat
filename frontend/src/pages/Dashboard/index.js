@@ -10,16 +10,14 @@ export default function Dashboard(){
     const [spots, setSpots] = useState([]);
 
     useEffect(() => {
-
         async function loadSpots(){
             const user_id = localStorage.getItem('user')
             const response = await api.get('/dashboard', {
                 headers: {user_id}
             })
-
             setSpots(response.data)
+            console.log(response.data)
         }
-
         loadSpots();
     }, [])
 
